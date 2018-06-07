@@ -3,7 +3,6 @@ include('rake/rake.php');
 
 session_start();
 
-
 if(isset($_SESSION['name'])){
   $name = $_SESSION['name'];
   $fid = $_SESSION['id'];
@@ -12,9 +11,8 @@ else{
   header('Location: login.html');
 }
 
-require __DIR__ . '/vendor/autoload.php';
-	# Imports the Google Cloud client library
-use Google\Cloud\Translate\TranslateClient;
+//require __DIR__ . '/vendor/autoload.php';# Imports the Google Cloud client library
+//use Google\Cloud\Translate\TranslateClient;
 $servername = "localhost";
 $username = "root";
 $password = "Namita&811";
@@ -81,7 +79,7 @@ if(isset($_POST['submit_text'])||isset($_POST['submit_img'])||isset($_POST['subm
 					insertImgText($textFileName,basename($fileNewName));
 					fwrite($myfile, $var." n6a6m6i6t6a ");
 					fclose($myfile);
-					translateLang($textFileNewName,$var);
+					//translateLang($textFileNewName,$var);
 
 					$wordsTags = autoTagging($textFileNewName);
 					insertTags($wordsTags);//Insert into tags table
@@ -102,7 +100,7 @@ if(isset($_POST['submit_text'])||isset($_POST['submit_img'])||isset($_POST['subm
 		$myfile = fopen($fileNewName, "w") or die("Unable to open file!");
 		fwrite($myfile, $var." n6a6m6i6t6a ");
 		fclose($myfile);
-		translateLang($fileNewName,$var);
+		//translateLang($fileNewName,$var);
 
 		//$wordsTags = autoTagging($fileNewName);
 
@@ -224,7 +222,7 @@ function autoTagging($fullFile){
 	$original = explode("n6a6m6i6t6a", $str);
 
 	$rake = new Rake('rake/stoplist_smart.txt');
-	$phrases = $rake->extract($original[1]);
+	$phrases = $rake->extract($original[0]);
 	// $wordsTags=array();
 	// $words = preg_split('/[\s]+/', $str );
 	// $lengthWords = count($words);
