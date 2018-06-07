@@ -104,12 +104,14 @@ if(isset($_POST['submit_text'])||isset($_POST['submit_img'])||isset($_POST['subm
 		fclose($myfile);
 		translateLang($fileNewName,$var);
 
-		$wordsTags = autoTagging($fileNewName);
+		//$wordsTags = autoTagging($fileNewName);
 
 		//print_r($wordsTags);
 
-		$relatedQ = checkRelatedQuestions($fileName,$wordsTags);
+		//$relatedQ = checkRelatedQuestions($fileName,$wordsTags);
 		
+		$relatedQ = '';
+
 		if(!empty($relatedQ)){
 			//echo "string";
 			$_SESSION['arrayRelated'] = $relatedQ;
