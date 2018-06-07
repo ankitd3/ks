@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 $sqlSolved = "SELECT * FROM q WHERE solved = 1";
 $sqlUnsolved = "SELECT * FROM q WHERE solved = 0";
 
-$allowedAudio = array('mp3','ogg'); //accepted file types
+$allowedAudio = array('mp3','ogg','m4a'); //accepted file types
 $allowedImage = array('jpeg','jpg','png'); //accepted file types
 
 $solved = fetchQuestion($sqlSolved,1);//1-Solved

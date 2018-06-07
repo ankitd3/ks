@@ -34,7 +34,7 @@ if(isset($_POST['submit_text'])||isset($_POST['submit_img'])||isset($_POST['subm
 		$fileType=$file['type']; //type ?? not used
 		$fileEx = explode('.', $fileName); //Explode similar split in python
 		$fileExt = strtolower(end($fileEx)); //lower case (JPG -> jpg) and from end()
-		$allowed = array('mp3','ogg'); //accepted file types
+		$allowed = array('mp3','ogg','m4a'); //accepted file types
 		if(in_array($fileExt, $allowed)){
 			$dir='Question/';
 			$fileNewName = uniqid('',true).".".$fileExt;

@@ -25,7 +25,7 @@ if ($conn->connect_error) {
 //$sqlSolved = "SELECT qid,sid FROM qs WHERE qid in (select qid from q where q\.solved = 1)";
 $sqlSolved = "SELECT * FROM q WHERE (solved = 1) AND qid IN (SELECT qid FROM qs WHERE eid = '".$id."')";
 
-$allowedAudio = array('mp3','ogg'); //accepted file types
+$allowedAudio = array('mp3','ogg','m4a'); //accepted file types
 $allowedImage = array('jpeg','jpg','png'); //accepted file types
 
 $solved = fetchQuestion($sqlSolved,1);//1-Solved
