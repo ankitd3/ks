@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Profile</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <!--custom css-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md">
+        <a href="#" style="color: #FAFEF9" class="navbar-brand"> Q/A</a>
+        <div id="google_translate_element"></div>
+        <button type="button" data-target="#menu" data-toggle="collapse" aria-controls="menu" aria-expanded="false" aria-label="toggle navigation"
+            class="navbar-toggler navbar-dark">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Ask question</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Frequently asked</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My questions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Signout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <h1>Krishi Sahayak</h1>
+    </div>
+    <hr>
+    <div class="container">
+        <h3> Farmer Profile </h3>
+        <hr><hr>
+
+        <form action="" method="POST">
+            <label for="q1">
+                <h5>Crop sown? </h5>
+            </label>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="q1">Yes
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="q1">No
+                </label>
+            </div>
+            <button class="btn btn-md" type="submit"> Add/Edit </button>
+        </form>
+        <hr>
+        <form>
+            <label for="q2">
+                <h5>Polyhouse? </h5>
+            </label>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="q2">Yes
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="q2">No
+                </label>
+            </div>
+            <button class="btn btn-md" type="submit"> Add/Edit </button>
+        </form>
+        <hr>
+        <form action="" method="POST">
+            <div class=" form-group ">
+                <label for="crop">
+                    <h5>Name of crops:(enter "none" if not sown) </h5>
+                </label>
+                <input type="textarea" class="form-control" id="crop" placeholder="rice,wheat">
+            </div>
+            <button class="btn btn-lg" type="submit"> Add/Edit </button>
+        </form>
+        <hr>
+        <form onsubmit="addVal('irrigation');" action="" method="POST">
+            <div class=" form-group ">
+                <label for="irrigation">
+                    <h5>irrigation type: </h5>
+                </label>
+                <select id='irrigation' class="custom-select custom-select-md mb-3">
+                    <option selected disabled>Choose type</option>
+                    <option value="1">Sprinkler</option>
+                    <option value="2">Drip irrigation</option>
+                </select>
+            </div>
+            <button class="btn btn-lg" type="submit"> Add/Edit </button>
+        </form>
+
+        <hr>
+        <form action="" method="POST">
+            <div class=" form-group ">
+                <label for="area">
+                    <h5>Location: </h5>
+                </label>
+                <input type="text" class="form-control" id="area" placeholder="Maharashtra/ Goa/ Gujarat">
+            </div>
+            <button class="btn btn-lg" type="submit"> Add/Edit </button>
+        </form>
+        <hr>
+        <form>
+            <div class=" form-group ">
+                <label for="loan">
+                    <h5>Loan availed ( amount, principal, time ): (type "none" for no loan) </h5>
+                </label>
+                <input type="textarea" class="form-control" id="loan" placeholder="SBI agricultural loan, 1,00,000 INR, 6% interest">
+            </div>
+            <button class="btn btn-lg" type="submit"> Add/Edit </button>
+        </form>
+        <hr>
+        <form>
+            <div class=" form-group ">
+                <label for="">
+                    <h5>Fertilizers used: </h5>
+                </label>
+                <input type="text" class="form-control" id="area" placeholder="manure, npk ">
+            </div>
+            <button class="btn btn-lg" type="submit"> Add/Edit </button>
+        </form>
+    </div>
+    <script type="text/javascript ">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+        </script>
+    <script type="text/javascript " src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit "></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN
+            " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q
+            " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl
+            " crossorigin="anonymous "></script>
+</body>
+
+</html>
