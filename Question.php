@@ -102,14 +102,12 @@ if(isset($_POST['submit_text'])||isset($_POST['submit_img'])||isset($_POST['subm
 		fclose($myfile);
 		//translateLang($fileNewName,$var);
 
-		//$wordsTags = autoTagging($fileNewName);
+		$wordsTags = autoTagging($fileNewName);
 
 		//print_r($wordsTags);
 
-		//$relatedQ = checkRelatedQuestions($fileName,$wordsTags);
+		$relatedQ = checkRelatedQuestions($fileName,$wordsTags);
 		
-		$relatedQ = '';
-
 		if(!empty($relatedQ)){
 			//echo "string";
 			$_SESSION['arrayRelated'] = $relatedQ;
@@ -197,24 +195,24 @@ function checkRelatedQuestions($qid1,$tags){
 }
 
 
-function translateLang($file,$input){
-	$translate = new TranslateClient([
-	    'key' => 'AIzaSyCF8Q_I0_0UVYFufryFb4ZghjCzKLU09_Y'
-	]);
-	$lang = $translate->detectLanguage($input);
-	if(strcmp($lang['languageCode'],'en')!=0){
-		$result = $translate->translate($input, [
-		    'target' => 'en'
-		]);
-		$append = " ".$result['text'];
-		//$myfile = file_put_contents($file, $append.PHP_EOL , FILE_APPEND | LOCK_EX);
-	}
-	else{
-		$str = file_get_contents($file);
-		$append = " ".$str;
-	}
-	$myfile = file_put_contents($file, $append.PHP_EOL , FILE_APPEND | LOCK_EX);
-}
+// function translateLang($file,$input){
+// 	$translate = new TranslateClient([
+// 	    'key' => ''
+// 	]);
+// 	$lang = $translate->detectLanguage($input);
+// 	if(strcmp($lang['languageCode'],'en')!=0){
+// 		$result = $translate->translate($input, [
+// 		    'target' => 'en'
+// 		]);
+// 		$append = " ".$result['text'];
+// 		//$myfile = file_put_contents($file, $append.PHP_EOL , FILE_APPEND | LOCK_EX);
+// 	}
+// 	else{
+// 		$str = file_get_contents($file);
+// 		$append = " ".$str;
+// 	}
+// 	$myfile = file_put_contents($file, $append.PHP_EOL , FILE_APPEND | LOCK_EX);
+// }
 
 function autoTagging($fullFile){
 	$str = file_get_contents($fullFile);
