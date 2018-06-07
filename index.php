@@ -1,6 +1,6 @@
 <?php 
 
-$servername = "ip-172-31-28-80.ap-south-1.compute.internal";
+$servername = "localhost";
 $username = "root";
 $password = "Namita&811";
 $dbname = "ks";
