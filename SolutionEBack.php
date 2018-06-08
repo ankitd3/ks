@@ -11,9 +11,9 @@ else{
 }
 //$id = "25";
 
-require __DIR__ . '/vendor/autoload.php';
+//require __DIR__ . '/vendor/autoload.php';
 	# Imports the Google Cloud client library
-use Google\Cloud\Translate\TranslateClient;
+//use Google\Cloud\Translate\TranslateClient;
 
 $qid=$_POST['qid'];
 
@@ -102,7 +102,7 @@ if(isset($_POST['submit_text'])||isset($_POST['submit_img'])||isset($_POST['subm
 					fwrite($myfile, $var." n6a6m6i6t6a ");
 					fclose($myfile);
 
-					translateLang($textFileNewName,$var);
+					//translateLang($textFileNewName,$var);
 				}
 			}
 		}else{
@@ -119,7 +119,7 @@ if(isset($_POST['submit_text'])||isset($_POST['submit_img'])||isset($_POST['subm
 		fwrite($myfile, $var." n6a6m6i6t6a ");
 		fclose($myfile);
 
-		translateLang($fileNewName,$var);
+		//translateLang($fileNewName,$var);
 	}
 	header('Location: mySolution.php');
 }
