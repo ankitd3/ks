@@ -85,10 +85,10 @@ if(isset($_POST['submit_text'])||isset($_POST['submit_img'])||isset($_POST['subm
 				insertImgText($textFileName,basename($fileNewName));
 				fwrite($myfile, $var." n6a6m6i6t6a ");
 				fclose($myfile);
-				translateLang($textFileNewName,$var);
+				//translateLang($textFileNewName,$var);
 
-				// $wordsTags = autoTagging($textFileNewName);
-				// insertTags($wordsTags);//Insert into tags table
+				//$wordsTags = autoTagging($textFileNewName);
+				//insertTags($wordsTags);//Insert into tags table
 				// updateTag($wordsTags,basename($fileNewName));//Update into q_tag table
 			}
 		}
@@ -100,7 +100,7 @@ if(isset($_POST['submit_text'])||isset($_POST['submit_img'])||isset($_POST['subm
 		$myfile = fopen($fileNewName, "w") or die("Unable to open file!");
 		fwrite($myfile, $var." n6a6m6i6t6a ");
 		fclose($myfile);
-		translateLang($fileNewName,$var);
+		//translateLang($fileNewName,$var);
 
 		// $wordsTags = autoTagging($fileNewName);
 		insertdb($fileName);
