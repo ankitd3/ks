@@ -6,15 +6,15 @@ session_start();
 if(isset($_SESSION['name'])){
   $name = $_SESSION['name'];
   $id = $_SESSION['id'];
-  $type = $_SESSION['type'];
+  //$type = $_SESSION['type'];
 }
 else{
   header('Location: login.php');
 }
 
-require __DIR__ . '/vendor/autoload.php';
+//require __DIR__ . '/vendor/autoload.php';
 	# Imports the Google Cloud client library
-use Google\Cloud\Translate\TranslateClient;
+//use Google\Cloud\Translate\TranslateClient;
 
 if(isset($_POST['submit_text'])||isset($_POST['submit_img'])||isset($_POST['submit_audio'])){
 
