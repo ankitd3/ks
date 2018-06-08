@@ -175,6 +175,17 @@ if(isset($_SESSION['name'])){
             </div>
         </div>
 
+    <footer  class="page-footer font-small cyan darken-3 mt-4">
+
+
+        <div class="footer-copyright text-center py-3">© By
+        <a href="#"> ANKIT  &  NAMITA</a>
+      </div>
+  <!-- Copyright -->
+
+
+    </footer>
+
     </div>
 
     <script type="text/javascript">
