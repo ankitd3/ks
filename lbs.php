@@ -1,8 +1,15 @@
 <?php 
 echo "from server";
 
-$lane_number = $_POST['l'];
+$testOne = $_POST['one'];
+$testTwo = $_POST['two'];
 
-echo $lane_number;
+#$lane_number = $_POST['l'];
+
+#echo $lane_number;
+
+echo $testOne;
+
+echo $testTwo;
 
  ?>
